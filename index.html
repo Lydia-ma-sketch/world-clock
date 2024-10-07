@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock - Lydia</title>
   </head>
   <body>
@@ -17,26 +19,19 @@
           <option value="">Tokyo</option>
         </select>
       </section>
-      <section class="city-time">
+      <section class="city-time" id="london">
         <div class="city">
           <h2>London</h2>
-          <p class="date">October 7th, 2024</p>
+          <p id="date"></p>
         </div>
-        <div class="time">9:18:15 <small>AM</small></div>
+        <div class="time" id="time"></div>
       </section>
-      <section class="city-time">
+      <section class="city-time" id="new-york">
         <div class="city">
-          <h2>London</h2>
-          <p class="date">October 7th, 2024</p>
+          <h2>New York</h2>
+          <p id="date">October 7th, 2024</p>
         </div>
-        <div class="time">9:18:15 <small>AM</small></div>
-      </section>
-      <section class="city-time">
-        <div class="city">
-          <h2>London</h2>
-          <p class="date">October 7th, 2024</p>
-        </div>
-        <div class="time">9:18:15 <small>AM</small></div>
+        <div class="time" id="time">9:18:15 <small>AM</small></div>
       </section>
     </main>
     <footer>
