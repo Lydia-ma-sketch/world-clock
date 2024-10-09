@@ -11,28 +11,36 @@
   <body>
     <main>
       <h1>World Clocks</h1>
-      <section>
-        <select name="" id="">
-          <option value="">Select a country..</option>
-          <option value="">London</option>
-          <option value="">New York</option>
-          <option value="">Tokyo</option>
-        </select>
-      </section>
-      <section class="city-time" id="london">
-        <div class="city">
-          <h2>London</h2>
-          <p id="date"></p>
-        </div>
-        <div class="time" id="time"></div>
-      </section>
-      <section class="city-time" id="new-york">
-        <div class="city">
-          <h2>New York</h2>
-          <p id="date">October 7th, 2024</p>
-        </div>
-        <div class="time" id="time">9:18:15 <small>AM</small></div>
-      </section>
+
+      <select name="" id="city-select">
+        <option value="">Select a country..</option>
+        <option value="Asia/Manila">Manila</option>
+        <option value="America/Los_Angeles">Los Angeles</option>
+        <option value="Asia/Yangon">Yangon</option>
+      </select>
+      <div id="cities">
+        <section class="city-time" id="london">
+          <div class="city">
+            <h2>London</h2>
+            <p id="date"></p>
+          </div>
+          <div class="time" id="time"></div>
+        </section>
+        <section class="city-time" id="new-york">
+          <div class="city">
+            <h2>New York</h2>
+            <p id="date"></p>
+          </div>
+          <div class="time" id="time"></div>
+        </section>
+        <section class="city-time" id="tokyo">
+          <div class="city">
+            <h2>Tokyo</h2>
+            <p id="date"></p>
+          </div>
+          <div class="time" id="time"></div>
+        </section>
+      </div>
     </main>
     <footer>
       This project was coded by <strong>Lydia</strong> and open-sourced

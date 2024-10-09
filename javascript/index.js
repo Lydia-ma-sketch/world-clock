@@ -9,7 +9,7 @@ function updateTime() {
       .format("MMMM Do YYYY");
     londonTimeElement.innerHTML = moment()
       .tz("Europe/London")
-      .format("H:mm:ss [<small>]A[</small>]");
+      .format("h:mm:ss [<small>]A[</small>]");
   }
   //new-york
   let newYorkElement = document.querySelector("#new-york");
@@ -21,7 +21,19 @@ function updateTime() {
       .format("MMMM Do YYYY");
     newYorkTimeElement.innerHTML = moment()
       .tz("America/New_York")
-      .format("H:mm:ss [<small>]A[</small>]");
+      .format("h:mm:ss [<small>]A[</small>]");
+  }
+  //tokyo
+  let tokyoElement = document.querySelector("#tokyo");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector("#date");
+    let tokyoTimeElement = tokyoElement.querySelector("#time");
+    tokyoDateElement.innerHTML = moment()
+      .tz("Asia/Tokyo")
+      .format("MMMM Do YYYY");
+    tokyoTimeElement.innerHTML = moment()
+      .tz("Asia/Tokyo")
+      .format("h:mm:ss [<small>]A[</small>]");
   }
 }
 updateTime();
