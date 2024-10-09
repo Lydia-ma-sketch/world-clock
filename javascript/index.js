@@ -36,5 +36,26 @@ function updateTime() {
       .format("h:mm:ss [<small>]A[</small>]");
   }
 }
+
+function updateCity(event) {
+  let cityName = event.target.value.replace("_", " ").split("/")[1];
+  let cityTime = moment.tz(event.target.value);
+  let cityElement = document.querySelector("#cities");
+  if (event.target.value) {
+    cityElement.innerHTML = `<section class="city-time">
+          <div class="city">
+            <h2>${cityName}</h2>
+            <p id="date">${cityTime.format("MMMM Do YYYY")}</p>
+          </div>
+          <div class="time" id="time">${cityTime.format(
+            "h:mm:ss"
+          )} <small>${cityTime.format("A")}</small></div>
+        </section>`;
+  }
+}
+
 updateTime();
 setInterval(updateTime, 1000);
+
+let citySelectElement = document.querySelector("#city-select");
+citySelectElement.addEventListener("change", updateCity);
